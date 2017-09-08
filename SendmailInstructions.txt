@@ -1,0 +1,9 @@
+su --
+grep -n DAEMON_OPTIONS /etc/mail/sendmail.mc
+vim /etc/mail/sendmail.mc
+i to go into edit mode.  Change the line it might be line 118 and put dnl in front of the line. 
+Escape and then hold shift and type zz to save
+systemctl restart sendmail.service
+mutt
+don't forget to say y to create the email account.
+
